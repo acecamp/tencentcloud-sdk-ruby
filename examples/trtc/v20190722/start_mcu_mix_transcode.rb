@@ -30,5 +30,5 @@ payload = {
     "Template": 0
   }
 }
-resp = TencentCloud::TrtcClient.new(credential).start_mcu_mix_transcode(payload)
+resp = TencentCloud::TrtcClient.new(credential, 'ap-guangzhou').start_mcu_mix_transcode(payload)
 puts resp.body

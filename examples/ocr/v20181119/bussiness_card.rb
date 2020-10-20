@@ -2,15 +2,13 @@
 
 require 'bundler/setup'
 require 'tencent_cloud'
-require 'tencent_cloud/trtc/v20190722/trtc_client'
+require 'tencent_cloud/ocr/v20181119/ocr_client'
 # replace secret_id secret_key
 secret_id = 'SECRET_ID'
 secret_key = 'SECRET_KEY'
 credential = TencentCloud::Common::Credential.new(secret_id, secret_key)
 payload = {
-  'SdkAppId' => 'SDKAPPID',
-  'StartTime' => Time.now.to_i - 24 * 3600,
-  'EndTime' => Time.now.to_i
+  'ImageUrl' => 'IMAGE URL'
 }
-resp = TencentCloud::TrtcClient.new(credential, 'ap-guangzhou').describe_room_information(payload)
+resp = TencentCloud::OcrClient.new(credential, 'ap-beijing').business_card_ocr(payload)
 puts resp.body
