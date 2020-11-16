@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tencentcloud-sdk-ruby (0.2.0)
+    tencentcloud-sdk-ruby (0.2.1)
       typhoeus (~> 1.0)
 
 GEM

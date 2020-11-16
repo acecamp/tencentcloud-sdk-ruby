@@ -7,7 +7,7 @@ module TencentCloud
     ENDPOINT = 'ocr.tencentcloudapi.com'
     SERVICE_NAME = 'ocr'
     APIS = {
-      ####################
+      #################### 通用文字识别相关接口
       ## 通用印刷体识别
       ## https://cloud.tencent.com/document/api/866/33526
       general_basic_ocr: 'GeneralBasicOCR',
@@ -52,6 +52,75 @@ module TencentCloud
       ## 名片识别
       ## https://cloud.tencent.com/document/api/866/36214
       business_card_ocr: 'BusinessCardOCR',
+
+      #################### 票据单据识别相关接口
+      ## 运单识别
+      ## https://cloud.tencent.com/document/api/866/34934
+      waybill_ocr: 'WaybillOCR',
+
+      ## 增值税发票识别
+      ## https://cloud.tencent.com/document/api/866/36210
+      vat_invoice_ocr: 'VatInvoiceOCR',
+
+      ## 火车票识别
+      ## https://cloud.tencent.com/document/api/866/37071
+      train_ticket_ocr: 'TrainTicketOCR',
+
+      ## 出租车发票识别
+      ## https://cloud.tencent.com/document/api/866/37072
+      taxi_invoice_ocr: 'TaxiInvoiceOCR',
+
+      ## 定额发票识别
+      ## https://cloud.tencent.com/document/api/866/37073
+      quora_invoice_ocr: 'QuotaInvoiceOCR',
+
+      ## 机票行程单识别
+      ## https://cloud.tencent.com/document/api/866/37075
+      flight_invoice_ocr: 'FlightInvoiceOCR',
+
+      ## 购车发票识别
+      ## https://cloud.tencent.com/document/api/866/37076
+      car_invoice_ocr: 'CarInvoiceOCR',
+
+      ## 增值税发票（卷票）识别
+      ## https://cloud.tencent.com/document/api/866/37832
+      vat_roll_invoice_ocr: 'VatRollInvoiceOCR',
+
+      ## 过路过桥费发票识别
+      ## https://cloud.tencent.com/document/api/866/37833
+      toll_invoice_ocr: 'TollInvoiceOCR',
+
+      ## 轮船票识别
+      ## https://cloud.tencent.com/document/api/866/37834
+      ship_invoice_ocr: 'ShipInvoiceOCR',
+
+      ## 混贴票据识别
+      ## https://cloud.tencent.com/document/api/866/37835
+      mix_invoice_ocr: 'MixedInvoiceOCR',
+
+      ## 混贴票据分类
+      ## https://cloud.tencent.com/document/api/866/37836
+      mix_invoice_detect: 'MixedInvoiceDetect',
+
+      ## 通用机打发票识别
+      ## https://cloud.tencent.com/document/api/866/37837
+      invoice_general_ocr: 'InvoiceGeneralOCR',
+
+      ## 汽车票识别
+      ## https://cloud.tencent.com/document/api/866/37838
+      bus_invoice_ocr: 'BusInvoiceOCR',
+
+      ## 完税证明识别
+      ## https://cloud.tencent.com/document/api/866/37839
+      duty_paid_proof_ocr: 'DutyPaidProofOCR',
+
+      ## 金融票据切片识别
+      ## https://cloud.tencent.com/document/api/866/38295
+      finan_bill_slice_ocr: 'FinanBillSliceOCR',
+
+      ## 金融票据整单识别
+      ## https://cloud.tencent.com/document/api/866/38296
+      finan_bill_ocr: 'FinanBillOCR',
     }.freeze
   end
 end
