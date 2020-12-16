@@ -2,8 +2,6 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/tencent_cloud`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,8 +20,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
+```ruby
+require 'tencent_cloud/ocr/v20181119/ocr_client'
+credential = TencentCloud::Common::Credential.new(SECRET_ID, SECRET_KEY)
+payload = {
+  'ImageUrl' => 'IMAGE URL'
+}
+resp = TencentCloud::OcrClient.new(credential, 'ap-beijing').business_card_ocr(payload)
+pp JSON.parse(resp.body)
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
