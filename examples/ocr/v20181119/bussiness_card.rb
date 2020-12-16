@@ -11,4 +11,4 @@ payload = {
   'ImageUrl' => 'IMAGE URL'
 }
 resp = TencentCloud::OcrClient.new(credential, 'ap-beijing').business_card_ocr(payload)
-puts resp.body
+pp JSON.parse(resp.body)

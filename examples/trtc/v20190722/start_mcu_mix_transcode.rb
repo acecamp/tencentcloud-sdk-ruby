@@ -31,4 +31,4 @@ payload = {
   }
 }
 resp = TencentCloud::TrtcClient.new(credential, 'ap-guangzhou').start_mcu_mix_transcode(payload)
-puts resp.body
+pp JSON.parse(resp.body)

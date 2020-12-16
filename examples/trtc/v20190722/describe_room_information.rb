@@ -13,4 +13,4 @@ payload = {
   'EndTime' => Time.now.to_i
 }
 resp = TencentCloud::TrtcClient.new(credential, 'ap-guangzhou').describe_room_information(payload)
-puts resp.body
+pp JSON.parse(resp.body)
