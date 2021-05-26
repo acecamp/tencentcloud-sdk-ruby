@@ -78,7 +78,7 @@ module TencentCloud
 
         def canonical_uri
           uri = URI(request.base_url)
-          url_path = URI.encode(uri.path)
+          url_path = CGI.escape(uri.path)
           url_path == '' ? '/' : url_path
         end
 
