@@ -3,6 +3,7 @@
 require 'openssl'
 require 'typhoeus'
 require 'uri'
+require 'cgi'
 require 'json'
 module TencentCloud
   module Common
