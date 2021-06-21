@@ -36,7 +36,7 @@ module TencentCloud
     end
 
     def sign(current_timestamp, body)
-      Base64.encode64(OpenSSL::HMAC.digest(OpenSSL::Digest::Digest.new('sha256'), @secret_key, "#{current_timestamp}#{@access_id}#{body}")).strip
+      Base64.encode64(OpenSSL::HMAC.hexdigest('sha256', @secret_key, "#{current_timestamp}#{@access_id}#{body}")).strip
     end
   end
 end
