@@ -9,16 +9,16 @@ module TencentCloud
   class TpnsClient
     API_VERSION = '2021-04-22'
     ENDPOINTS = {
-      gz: 'https://api.tpns.tencent.com',
-      sh: 'https://api.tpns.sh.tencent.com',
-      hk: 'https://api.tpns.hk.tencent.com',
-      sg: 'https://api.tpns.sgp.tencent.com'
+      'gz' => 'https://api.tpns.tencent.com',
+      'sh' => 'https://api.tpns.sh.tencent.com',
+      'hk' => 'https://api.tpns.hk.tencent.com',
+      'sg' => 'https://api.tpns.sgp.tencent.com'
     }
 
     def initialize(access_id, secret_key, region)
       @access_id = access_id
       @secret_key = secret_key
-      @end_point = ENDPOINTS[region]
+      @end_point = ENDPOINTS[region.to_s]
     end
 
     def http_request(api_path, data)
