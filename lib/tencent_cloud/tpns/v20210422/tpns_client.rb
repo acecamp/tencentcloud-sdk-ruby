@@ -22,7 +22,7 @@ module TencentCloud
     end
 
     def http_request(api_path, data)
-      current_timestamp = Time.current.to_i
+      current_timestamp = Time.current.to_i.to_s
       uri = URI.parse("#{@end_point}#{api_path}")
 
       request = Net::HTTP::Post.new(uri.to_s)
