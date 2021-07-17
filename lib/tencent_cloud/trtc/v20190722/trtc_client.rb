@@ -56,7 +56,7 @@ module TencentCloud
       #################### 房间管理相关接口
       ## 解散房间
       ## https://cloud.tencent.com/document/api/647/37088
-      dissmiss_room: 'DissmissRoom',
+      dissmiss_room: 'DismissRoom',
       ## 移出用户
       ## https://cloud.tencent.com/document/api/647/40496
       remove_user: 'RemoveUser',
