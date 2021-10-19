@@ -121,6 +121,11 @@ module TencentCloud
       ## 金融票据整单识别
       ## https://cloud.tencent.com/document/api/866/38296
       finan_bill_ocr: 'FinanBillOCR',
+
+      #################### 行业文档识别相关接口
+      ## 表格识别（V2)
+      ## https://cloud.tencent.com/document/product/866/49525
+      recognize_table_ocr: 'RecognizeTableOCR'
     }.freeze
   end
 end
