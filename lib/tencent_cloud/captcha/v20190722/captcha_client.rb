@@ -3,7 +3,7 @@
 require 'json'
 
 module TencentCloud
-  class CaptchaClient < TencentCloud::Common::AbstractClient
+  class CaptchaClient
     API_VERSION = '2019-07-22'
     Action = 'DescribeCaptchaResult'
     CaptchaType = 9
