@@ -7,7 +7,7 @@ require 'tencent_cloud/common/http/sign'
 module TencentCloud
   module Common
     class BaseClient
-      def initialize(credential, region)
+      def initialize(credential, region = nil)
         @credential = credential
         @region = region
       end
@@ -22,10 +22,13 @@ module TencentCloud
         headers = {
           'X-TC-Action' => action,
           'X-TC-Version' => self.class::API_VERSION,
-          'X-TC-Region' => @region,
           'X-TC-Timestamp' => Time.now.to_i
         }
-        request = TencentCloud::Common::Http::Request.new @credential, self.class, headers: headers, body: JSON.generate(body, space: ' ')
+        headers['X-TC-Region'] = @region if @region
+        request = TencentCloud::Common::Http::Request.new @credential,
+                                                          self.class,
+                                                          headers: headers,
+                                                          body: JSON.generate(body, space: ' ')
         request.run
       end
 

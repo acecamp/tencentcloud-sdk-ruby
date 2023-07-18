@@ -31,7 +31,11 @@ module TencentCloud
 
       # 文本分类
       # https://cloud.tencent.com/document/api/271/35496
-      text_classification: 'TextClassification'
+      text_classification: 'TextClassification',
+
+      # 词法分析V2
+      # https://cloud.tencent.com/document/product/271/90611
+      parse_words: 'ParseWords'
     }.freeze
   end
 end
