@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tencentcloud-sdk-ruby (0.3.6)
+    tencentcloud-sdk-ruby (0.3.8)
       typhoeus (~> 1.0)
 
 GEM
@@ -11,7 +11,7 @@ GEM
     diff-lcs (1.3)
     ethon (0.16.0)
       ffi (>= 1.15.0)
-    ffi (1.16.3)
+    ffi (1.17.0-arm64-darwin)
     method_source (1.0.0)
     pry (0.13.1)
       coderay (~> 1.1)
