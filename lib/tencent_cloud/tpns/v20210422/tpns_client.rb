@@ -11,7 +11,7 @@ module TencentCloud
     ENDPOINTS = {
       'gz' => 'https://api.tpns.tencent.com',
       'sh' => 'https://api.tpns.sh.tencent.com',
-      'hk' => 'https://api.tpns.hk.tencent.com',
+      'hk' => 'https://tpns.acecamptech.com', # https://api.tpns.hk.tencent.com
       'sg' => 'https://api.tpns.sgp.tencent.com'
     }
 
