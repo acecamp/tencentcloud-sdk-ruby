@@ -9,3 +9,4 @@
 .history/
 # rspec failure tracking
 .rspec_status
+.vscode/
