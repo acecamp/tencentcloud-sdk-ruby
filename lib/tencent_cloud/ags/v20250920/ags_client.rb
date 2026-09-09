@@ -7,6 +7,11 @@ module TencentCloud
     API_VERSION = '2025-09-20'
     ENDPOINT = 'ags.tencentcloudapi.com'
     SERVICE_NAME = 'ags'
+
+    def initialize(credential, region = nil, timeout: 30, connecttimeout: 5)
+      super
+    end
+
     APIS = {
       # 沙箱工具相关接口
       # https://cloud.tencent.com/document/api/1814/124812

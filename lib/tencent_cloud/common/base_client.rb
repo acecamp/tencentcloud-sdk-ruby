@@ -7,9 +7,10 @@ require 'tencent_cloud/common/http/sign'
 module TencentCloud
   module Common
     class BaseClient
-      def initialize(credential, region = nil)
+      def initialize(credential, region = nil, timeout: nil, connecttimeout: nil)
         @credential = credential
         @region = region
+        @request_options = { timeout: timeout, connecttimeout: connecttimeout }.compact
       end
 
       def camel_case(str)
@@ -25,8 +26,10 @@ module TencentCloud
           'X-TC-Timestamp' => Time.now.to_i
         }
         headers['X-TC-Region'] = @region if @region
+        headers['X-TC-Token'] = @credential.token if @credential.token
         request = TencentCloud::Common::Http::Request.new @credential,
                                                           self.class,
+                                                          **@request_options,
                                                           headers: headers,
                                                           body: JSON.generate(body, space: ' ')
         request.run
